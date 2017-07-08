@@ -1,0 +1,1 @@
+if(Get-Process -Name "chrome" -ErrorAction SilentlyContinue){}else{Start-Process "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"}
