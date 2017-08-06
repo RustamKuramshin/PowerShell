@@ -1,0 +1,1 @@
+Get-ChildItem -Path "G:\IT\IT'тека" -Recurse -File | ?{$_.FullName -notmatch "языки программировани€"} | ?{$_.FullName -match "Python"} > "Python.txt"
