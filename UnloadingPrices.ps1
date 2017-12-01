@@ -1,6 +1,6 @@
 $fatClient  = ''
 $1cSrv      = ''
-$1cAdmPass  = ''
+$1cAdmPass  = ' '
 $1cAdm      = ''
 $sharePath  = ''
 $pricesPath = $sharePath
@@ -8,15 +8,15 @@ $ftpPath    = ''
 $ftpPass    = ''
 $ftpLogin   = ''
 
-$xmlParam = [xml](Get-Content -Path $sharePath\СкладыИТипыЦен.xml -Encoding UTF8)
-$bases = @($xmlParam.СкладыИТипыЦен.База1С.ИмяБазыНаСервере)
-$pricesTypes = @($xmlParam.СкладыИТипыЦен.База1С.ТипЦен)
-$pricesTypesNames = @($xmlParam.СкладыИТипыЦен.База1С.ТипЦенИмя)
-$warehouses = @($xmlParam.СкладыИТипыЦен.База1С.Склад)
-$warehousesNames = @($xmlParam.СкладыИТипыЦен.База1С.СкладИмя)
-$firms      = @($xmlParam.СкладыИТипыЦен.База1С.Фирма)
+$xmlParam = [xml](Get-Content -Path $sharePath\Г‘ГЄГ«Г Г¤Г»Г€Г’ГЁГЇГ»Г–ГҐГ­.xml -Encoding UTF8)
+$bases = @($xmlParam.Г‘ГЄГ«Г Г¤Г»Г€Г’ГЁГЇГ»Г–ГҐГ­.ГЃГ Г§Г 1Г‘.Г€Г¬ГїГЃГ Г§Г»ГЌГ Г‘ГҐГ°ГўГҐГ°ГҐ)
+$pricesTypes = @($xmlParam.Г‘ГЄГ«Г Г¤Г»Г€Г’ГЁГЇГ»Г–ГҐГ­.ГЃГ Г§Г 1Г‘.Г’ГЁГЇГ–ГҐГ­)
+$pricesTypesNames = @($xmlParam.Г‘ГЄГ«Г Г¤Г»Г€Г’ГЁГЇГ»Г–ГҐГ­.ГЃГ Г§Г 1Г‘.Г’ГЁГЇГ–ГҐГ­Г€Г¬Гї)
+$warehouses = @($xmlParam.Г‘ГЄГ«Г Г¤Г»Г€Г’ГЁГЇГ»Г–ГҐГ­.ГЃГ Г§Г 1Г‘.Г‘ГЄГ«Г Г¤)
+$warehousesNames = @($xmlParam.Г‘ГЄГ«Г Г¤Г»Г€Г’ГЁГЇГ»Г–ГҐГ­.ГЃГ Г§Г 1Г‘.Г‘ГЄГ«Г Г¤Г€Г¬Гї)
+$firms      = @($xmlParam.Г‘ГЄГ«Г Г¤Г»Г€Г’ГЁГЇГ»Г–ГҐГ­.ГЃГ Г§Г 1Г‘.Г”ГЁГ°Г¬Г )
 $uniqueFirms = $firms | Select-Object -Unique
-$clients      = @($xmlParam.СкладыИТипыЦен.База1С.Клиент)
+$clients      = @($xmlParam.Г‘ГЄГ«Г Г¤Г»Г€Г’ГЁГЇГ»Г–ГҐГ­.ГЃГ Г§Г 1Г‘.ГЉГ«ГЁГҐГ­ГІ)
 $uniqueCustomers = $clients | Select-Object -Unique
 
 $i = 0
@@ -28,7 +28,7 @@ foreach($base in $bases){
     $runParam = '"'+$runParam+'"'
 
     $enterpriseArg = "/S $1cSrv\$base /N $1cAdm /P $1cAdmPass /Debug /C $runParam `
-    /Execute $sharePath\ВыгрузкаЦенДляСайта.epf /WA- /Out $sharePath\ПлатформаЛог.txt -NoTruncate"
+    /Execute $sharePath\Г‚Г»ГЈГ°ГіГ§ГЄГ Г–ГҐГ­Г„Г«ГїГ‘Г Г©ГІГ .epf /WA- /Out $sharePath\ГЏГ«Г ГІГґГ®Г°Г¬Г Г‹Г®ГЈ.txt -NoTruncate"
 
     $1cExe = New-Object System.Diagnostics.Process
     $1cExe.StartInfo.Filename = $fatClient
