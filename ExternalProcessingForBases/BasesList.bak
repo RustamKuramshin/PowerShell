@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatabaseList>
+<Base1C BasesNameOnServer="ik_ut" Server1C="ent-02" Username="Администратор" Password="A12pAR" AccessCode="A12pAR" RunParameter="ik_ut" />
+<Base1C BasesNameOnServer="eo_ut" Server1C="ent-02" Username="Администратор" Password="A12pAR" AccessCode="A12pAR" RunParameter="eo_ut" />
+<Base1C BasesNameOnServer="ltc_ut" Server1C="ent-02" Username="Администратор" Password="A12pAR" AccessCode="A12pAR" RunParameter="ltc_ut" />
+<Base1C BasesNameOnServer="lm_ut" Server1C="ent-02" Username="Администратор" Password="A12pAR" AccessCode="A12pAR" RunParameter="lm_ut" />
+<Base1C BasesNameOnServer="lm_rec" Server1C="ent-02" Username="Администратор" Password="A12pAR" AccessCode="A12pAR" RunParameter="lm_rec" />
+<Base1C BasesNameOnServer="me_ut" Server1C="ent-02" Username="Администратор" Password="A12pAR" AccessCode="A12pAR" RunParameter="me_ut" />
+<Base1C BasesNameOnServer="ol_ut" Server1C="ent-02" Username="Администратор" Password="A12pAR" AccessCode="A12pAR" RunParameter="ol_ut" />
+<Base1C BasesNameOnServer="sto_ut" Server1C="ent-02" Username="Администратор" Password="A12pAR" AccessCode="A12pAR" RunParameter="sto_ut" />
+<Base1C BasesNameOnServer="uo_ut" Server1C="ent-02" Username="Администратор" Password="A12pAR" AccessCode="A12pAR" RunParameter="uo_ut" />
+</DatabaseList>

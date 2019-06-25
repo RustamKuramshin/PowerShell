@@ -17,7 +17,7 @@ function Transfer-IDN ($domain, $coding){
     }
 }
 
-$domainName = '' 
+$domainName = 'стайлтехойл.рф' 
 
 Write-Host Старое доменое имя: $domainName
 
